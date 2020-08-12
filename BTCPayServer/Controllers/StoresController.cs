@@ -402,6 +402,7 @@ namespace BTCPayServer.Controllers
                 }
             }).ToList();
             vm.RequiresRefundEmail = storeBlob.RequiresRefundEmail;
+            vm.LazyPaymentMethods = storeBlob.LazyPaymentMethods;
             vm.LightningAmountInSatoshi = storeBlob.LightningAmountInSatoshi;
             vm.LightningPrivateRouteHints = storeBlob.LightningPrivateRouteHints;
             vm.OnChainWithLnInvoiceFallback = storeBlob.OnChainWithLnInvoiceFallback;
@@ -476,6 +477,7 @@ namespace BTCPayServer.Controllers
                 }).ToList();
 
             blob.RequiresRefundEmail = model.RequiresRefundEmail;
+            blob.LazyPaymentMethods = model.LazyPaymentMethods;
             blob.LightningAmountInSatoshi = model.LightningAmountInSatoshi;
             blob.LightningPrivateRouteHints = model.LightningPrivateRouteHints;
             blob.OnChainWithLnInvoiceFallback = model.OnChainWithLnInvoiceFallback;
